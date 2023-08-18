@@ -13,6 +13,24 @@ export const FormWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 380px;
+
+  overflow: auto;
+  background: radial-gradient(circle at center, #000000 20%, #170b0c 80%);
+  animation: formWrapper 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+
+  @keyframes formWrapper {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
 `;
 
 export const FormEl = styled.form`
@@ -62,7 +80,7 @@ export const AddContactButton = styled.button`
   border: none;
   font-size: 14px;
   outline: none;
-  background-color: red;
+  background: ${p => p.theme.colors.button};
   color: ${p => p.theme.colors.label};
   cursor: pointer;
   position: relative;

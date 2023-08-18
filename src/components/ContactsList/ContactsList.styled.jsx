@@ -13,6 +13,23 @@ export const ContactsListWrapp = styled.div`
   flex-direction: column;
   align-items: center;
   width: 380px;
+
+    overflow: auto;
+  background: radial-gradient(circle at center, #000000 20%, #170b0c 80%);
+  animation: contactsListWrapp 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+
+  @keyframes contactsListWrapp {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
 `;
 
 export const List = styled.ul`
